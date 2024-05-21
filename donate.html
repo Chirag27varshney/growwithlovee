@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .donate-form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input[type="text"], 
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .center-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Donate Now</h1>
+        <div class="center-image">
+            <img src="/Users/chiragvarshney/Desktop/djweb/QR Code.jpg" alt="Donate Image" width="300">
+            <p>You can donate with the help of the QR code given above.</p>
+        </div>
+        <div class="donate-form">
+            <form action="process_donation.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Donation Amount:</label>
+                    <select id="amount" name="amount" required>
+                        <option value="">Select Amount</option>
+                        <option value="10">Rs. 100</option>
+                        <option value="20">Rs. 500</option>
+                        <option value="50">Rs. 1000</option>
+                        <option value="100">Rs. 2000</option>
+                        <option value="custom">Custom Amount</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="custom_amount">Custom Amount:</label>
+                    <input type="text" id="custom_amount" name="custom_amount">
+                </div>
+                <div class="form-group">
+                    <label for="Ref-ID">Please give the Reference Number: </label>
+                    <input type="text" id="Ref-ID" name="Ref-ID">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Donate">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
